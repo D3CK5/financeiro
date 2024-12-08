@@ -34,6 +34,15 @@ npm install
 npm run dev
 ```
 
+🌐 Ao executar, o servidor será iniciado e:
+- Abrirá automaticamente no navegador padrão
+- Exibirá URLs para acesso local e em rede
+- Escutará em todos os IPs da máquina na porta 3000
+
+### Acessando de Outros Dispositivos
+1. Descubra o IP da máquina (geralmente 192.168.x.x ou 10.0.x.x)
+2. Acesse `http://[SEU_IP]:3000` em outros dispositivos na mesma rede
+
 ## Roadmap
 - [ ] Integração com Banco de Dados MySQL
 - [ ] Sistema de Autenticação
