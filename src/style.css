@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.card {
+  @apply bg-white rounded-lg p-6;
+}
+
+.input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.nav-link {
+  @apply text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium;
+}
+
+.mobile-nav-link {
+  @apply text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium;
+}
+
+#monthFilter {
+  width: 150px;
+}
+
+#yearFilter {
+  width: 150px;
+}
+
+.annual-summary-cards,
+.summary-cards {
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.annual-summary-cards.cards-minimized,
+.summary-cards.cards-minimized {
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.annual-summary-cards:not(.cards-minimized),
+.summary-cards:not(.cards-minimized) {
+  max-height: 1000px; /* Valor grande o suficiente para cobrir todo o conteúdo */
+  opacity: 1;
+}
+
+.cards-minimized {
+  max-height: 50px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.cards-minimized > .card {
+  opacity: 0;
+  transform: scaleY(0);
+  height: 0;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-all-cards-btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.toggle-all-cards-btn:hover {
+  background-color: rgba(236, 236, 236, 0.9);
+}
+
+.toggle-all-cards-btn .tooltip {
+  pointer-events: none;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+@media (max-width: 1366px) {
+  .container {
+    max-width: 95%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .card {
+    @apply p-4; /* Reduzir padding */
+  }
+
+  body {
+    padding-bottom: 2rem; /* Reduzir padding final */
+  }
+
+  .grid-cols-1.md\:grid-cols-2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+}

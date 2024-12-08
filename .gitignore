@@ -1,0 +1,43 @@
+# Dependências
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Arquivos de build
+dist/
+build/
+out/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Cache do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local
+*.local
+
+# Dependências do Vite
+.vite/
+
+# Arquivos de teste
+coverage/
+
+# Backups temporários
+*.bak
+*.backup
